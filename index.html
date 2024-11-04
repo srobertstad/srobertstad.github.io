@@ -10,17 +10,18 @@
     h1 { font-size: 2em; }
     h2 { font-size: 1.5em; margin-top: 1em; }
     p { line-height: 1.6; }
-    ul { list-style-type: none; padding: 0; }
+    ul { list-style-type: none; padding-left: 0; }
     li { margin-bottom: 10px; }
     .section { margin-bottom: 20px; }
+    .nested-ul { list-style-type: disc; margin-left: 20px; }
   </style>
 </head>
 <body>
 
   <h1>Sam Robertstad</h1>
   <p>Product Leader | Digital Strategy | Innovation</p>
-  <p>Phone: 214-535-2496 | Email: <a href="mailto:SamRobertstad@gmail.com">SamRobertstad@gmail.com</a>| 
-  <br>LinkedIn: <a href="https://www.linkedin.com/in/samrobertstad">linkedin.com/in/samrobertstad</a> | Location: Reno, NV [Remote]</p>
+  <p>Phone: 214-535-2496 | Email: <a href="mailto:SamRobertstad@gmail.com">SamRobertstad@gmail.com</a> | 
+  LinkedIn: <a href="https://www.linkedin.com/in/samrobertstad">linkedin.com/in/samrobertstad</a> | Location: Reno, NV [Remote]</p>
 
   <div class="section">
     <h2>Professional Summary</h2>
@@ -32,20 +33,19 @@
     <ul>
       <li>
         <strong>Senior Manager, Product</strong> - Sinclair Digital – Remote, Seattle, WA (March 2022 – Present)
-        <ul>
-          <br><li><strong>November 2023 – Present:</strong> 
-            <ul>
-              <li>Spearheading ATSC 3.0 (NextGen TV) initiatives through a Broadcast Application, advancing user engagement and adoption in cutting-edge technologies.</li>  
-              <li><Leading AI-driven projects to streamline producer workflows and enhance news platform user experiences, delivering operational efficiencies and impactful consumer features.</li>
+        <ul class="nested-ul">
+          <li><strong>November 2023 – Present:</strong>
+            <ul class="nested-ul">
+              <li>Spearheading ATSC 3.0 (NextGen TV) initiatives through a Broadcast Application, advancing user engagement and adoption in cutting-edge technologies.</li>
+              <li>Leading AI-driven projects to streamline producer workflows and enhance news platform user experiences, delivering operational efficiencies and impactful consumer features.</li>
             </ul>
-          <li><strong>March 2022 – October 2023:</strong> 
-            Managed a portfolio of 80+ news applications, strategically aligning development to boost engagement and user satisfaction through continuous UX improvements.</li>
+          </li>
+          <li><strong>March 2022 – October 2023:</strong> Managed a portfolio of 80+ news applications, strategically aligning development to boost engagement and user satisfaction through continuous UX improvements.</li>
         </ul>
       </li>
       <li>
         <strong>Senior Product Manager, Magnolia DTC</strong> - Warner Bros. Discovery – Bellevue, WA (June 2021 – January 2022)
-        <ul><br>
-          <ul>
+        <ul class="nested-ul">
           <li>Co-led the successful cross-platform launch of the Magnolia Network (iOS, Android, CTV, and web), driving accessibility and user engagement.</li>
           <li>Defined and managed the product roadmap for the Magnolia Shop, implementing user-centric enhancements to elevate the digital shopping experience.</li>
           <li>Synthesized customer feedback into actionable JIRA requirements, prioritizing features to meet customer needs and achieve business objectives.</li>
@@ -53,8 +53,7 @@
       </li>
       <li>
         <strong>Senior Product Manager, Amazon Books</strong> - Amazon – Seattle, WA (September 2019 – June 2021)
-        <ul><br>
-          <ul>
+        <ul class="nested-ul">
           <li>Led the Kindle Royalty Costing team, ensuring precise execution of royalty costing processes for Amazon Kindle content.</li>
           <li>Designed and launched a self-service tool for Amazon Books, streamlining complex royalty costing management and enabling scalability.</li>
           <li>Reduced time-to-deliver for new content by 97%, improving agility and empowering stronger negotiations on favorable terms.</li>
@@ -62,14 +61,12 @@
       </li>
       <li>
         <strong>Senior Manager, Product & Technology</strong> - T-Mobile – Seattle, WA (December 2017 – August 2019)
-        <ul><br>
-          <ul>
+        <ul class="nested-ul">
           <li>Managed a team of Senior Product Managers to deliver enhanced customer experiences across T-Mobile’s branded and third-party products.</li>
           <li>Oversaw the calling services portfolio and application preloads, aligning partnerships with organizational goals and customer needs.</li>
           <li>Developed strategic vision and governance processes for product initiatives, leading to successful implementation and user adoption.</li>
         </ul>
       </li>
-      <!-- Add more roles here as needed -->
     </ul>
   </div>
 
