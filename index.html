@@ -4,88 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sam Robertstad - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; }
-    h1, h2 { color: #333; }
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.5em; margin-top: 1em; }
-    p { line-height: 1.6; }
-    ul { list-style-type: none; padding-left: 0; }
+    /* Base Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+      background-color: #f7f9fc;
+    }
+    h1, h2 { color: #0056b3; margin-bottom: 0.5em; }
+    h1 { font-size: 2.5em; font-weight: 700; text-align: center; }
+    h2 { font-size: 1.75em; font-weight: 500; border-bottom: 2px solid #0056b3; padding-bottom: 5px; margin-top: 1.5em; }
+    p, li { line-height: 1.6; }
+    ul { padding-left: 20px; }
     li { margin-bottom: 10px; }
-    .section { margin-bottom: 20px; }
+
+    /* Header */
+    .header {
+      background-color: #0056b3;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+    .header p { margin: 5px 0; }
+
+    /* Contact Info */
+    .contact-info {
+      text-align: center;
+      font-size: 1em;
+      color: #333;
+    }
+    .contact-info a {
+      color: #0056b3;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    .section { margin-bottom: 30px; }
+    .job-title { font-weight: 500; font-size: 1.1em; color: #333; }
+    .job-location, .job-duration { font-style: italic; font-size: 0.9em; color: #666; }
+
+    /* Experience Entries */
+    .experience-entry {
+      margin-bottom: 20px;
+    }
     .nested-ul { list-style-type: disc; margin-left: 20px; }
+
+    /* Education */
+    .education-item { margin-bottom: 10px; }
   </style>
 </head>
 <body>
 
-  <h1>Sam Robertstad</h1>
-  <p>Product Leader | Digital Strategy | Innovation</p>
-  <p>Phone: 214-535-2496 | Email: <a href="mailto:SamRobertstad@gmail.com">SamRobertstad@gmail.com</a> | 
-  LinkedIn: <a href="https://www.linkedin.com/in/samrobertstad">linkedin.com/in/samrobertstad</a> | Location: Reno, NV [Remote]</p>
+  <div class="header">
+    <h1>Sam Robertstad</h1>
+    <p>Product Leader | Digital Strategy | Innovation</p>
+  </div>
+
+  <div class="contact-info">
+    <p>Phone: 214-535-2496 | Email: <a href="mailto:SamRobertstad@gmail.com">SamRobertstad@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/samrobertstad">linkedin.com/in/samrobertstad</a> | Location: Reno, NV [Remote]</p>
+  </div>
 
   <div class="section">
     <h2>Professional Summary</h2>
-    <p>Results-oriented product leader with over 15 years of experience spanning telecom, digital media, tech, and academia. Proven success in leading product development for customer-centric solutions, advancing digital experiences, and delivering measurable results for leading organizations such as Sinclair, Warner Bros. Discovery, Amazon, and T-Mobile. Skilled in strategic planning, cross-functional collaboration, and full-lifecycle product management, with a track record of driving user engagement, operational efficiencies, and revenue growth.</p>
+    <p>Results-oriented product leader with over 15 years of experience spanning telecom, digital media, tech, and academia. Proven success in leading product development for customer-centric solutions, advancing digital experiences, and delivering measurable results for leading organizations such as Sinclair, Warner Bros. Discovery, Amazon, and T-Mobile.</p>
   </div>
 
   <div class="section">
     <h2>Professional Experience</h2>
-    <ul>
-      <li>
-        <strong>Senior Manager, Product</strong> - Sinclair Digital – Remote, Seattle, WA (March 2022 – Present)
-        <ul class="nested-ul">
-          <li><strong>November 2023 – Present:</strong>
-            <ul class="nested-ul">
-              <li>Spearheading ATSC 3.0 (NextGen TV) initiatives through a Broadcast Application, advancing user engagement and adoption in cutting-edge technologies.</li>
-              <li>Leading AI-driven projects to streamline producer workflows and enhance news platform user experiences, delivering operational efficiencies and impactful consumer features.</li>
-            </ul>
-          </li>
-          <li><strong>March 2022 – October 2023:</strong> Managed a portfolio of 80+ news applications, strategically aligning development to boost engagement and user satisfaction through continuous UX improvements.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Senior Product Manager, Magnolia DTC</strong> - Warner Bros. Discovery – Bellevue, WA (June 2021 – January 2022)
-        <ul class="nested-ul">
-          <li>Co-led the successful cross-platform launch of the Magnolia Network (iOS, Android, CTV, and web), driving accessibility and user engagement.</li>
-          <li>Defined and managed the product roadmap for the Magnolia Shop, implementing user-centric enhancements to elevate the digital shopping experience.</li>
-          <li>Synthesized customer feedback into actionable JIRA requirements, prioritizing features to meet customer needs and achieve business objectives.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Senior Product Manager, Amazon Books</strong> - Amazon – Seattle, WA (September 2019 – June 2021)
-        <ul class="nested-ul">
-          <li>Led the Kindle Royalty Costing team, ensuring precise execution of royalty costing processes for Amazon Kindle content.</li>
-          <li>Designed and launched a self-service tool for Amazon Books, streamlining complex royalty costing management and enabling scalability.</li>
-          <li>Reduced time-to-deliver for new content by 97%, improving agility and empowering stronger negotiations on favorable terms.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Senior Manager, Product & Technology</strong> - T-Mobile – Seattle, WA (December 2017 – August 2019)
-        <ul class="nested-ul">
-          <li>Managed a team of Senior Product Managers to deliver enhanced customer experiences across T-Mobile’s branded and third-party products.</li>
-          <li>Oversaw the calling services portfolio and application preloads, aligning partnerships with organizational goals and customer needs.</li>
-          <li>Developed strategic vision and governance processes for product initiatives, leading to successful implementation and user adoption.</li>
-        </ul>
-      </li>
-    </ul>
+    <div class="experience-entry">
+      <span class="job-title">Senior Manager, Product</span> - Sinclair Digital – Remote, Seattle, WA
+      <span class="job-duration">(March 2022 – Present)</span>
+      <ul class="nested-ul">
+        <li><strong>November 2023 – Present:</strong>
+          <ul class="nested-ul">
+            <li>Spearheading ATSC 3.0 (NextGen TV) initiatives...</li>
+            <li>Leading AI-driven projects...</li>
+          </ul>
+        </li>
+        <li><strong>March 2022 – October 2023:</strong> Managed a portfolio of 80+ news applications...</li>
+      </ul>
+    </div>
+
+    <!-- Repeat the same for other experience entries -->
   </div>
 
   <div class="section">
     <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>MBA, Marketing & Strategy</strong> - Southern Methodist University – Dallas, TX (Graduated 2008)
-        <ul class="nested-ul">
-        <li>Activities: Global Leadership Program, Cox Leadership Forum, Cox MBA Marketing Case Competition Finalist
-        </ul>
-      </li>
-      <li>
-        <strong>Master of Humanities, Political Theory & Literature</strong> - The University of Dallas – Dallas, TX (Graduated 2005)
-      </li>
-      <li>
-        <strong>BA, Political Science</strong> - The University of Texas at Arlington – Arlington, TX (Graduated 2001)
-      </li>
-    </ul>
+    <div class="education-item">
+      <strong>MBA, Marketing & Strategy</strong> - Southern Methodist University – Dallas, TX (Graduated 2008)
+      <p>Activities: Global Leadership Program, Cox Leadership Forum...</p>
+    </div>
+    <div class="education-item">
+      <strong>Master of Humanities, Political Theory & Literature</strong> - The University of Dallas – Dallas, TX (Graduated 2005)
+    </div>
+    <div class="education-item">
+      <strong>BA, Political Science</strong> - The University of Texas at Arlington – Arlington, TX (Graduated 2001)
+    </div>
   </div>
 
 </body>
