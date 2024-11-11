@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sam Robertstad - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
   /* Base Styles */
   body {
@@ -36,28 +37,34 @@
   /* Contact Info */
   .contact-info {
     text-align: center;
-    font-size: 1em;
-    color: #333;
+    background: #eaf3ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .contact-info div {
+    display: inline-block;
+    margin: 0 15px;
   }
   .contact-info a {
     color: #0056b3;
     text-decoration: none;
-    margin: 0 10px;
+    font-size: 1.1em;
   }
   .contact-info a:hover { text-decoration: underline; }
-
-  /* Sections */
-  .section { margin-bottom: 30px; }
-  .job-title { font-weight: 500; font-size: 1.1em; color: #333; }
-  .job-location, .job-duration { font-style: italic; font-size: 0.9em; color: #666; }
-
-  /* Experience Entries */
-  .experience-entry { margin-bottom: 20px; }
-  .nested-ul { list-style-type: disc; margin-left: 20px; }
-
-  /* Education */
-  .education-item { margin-bottom: 10px; }
-</style>
+  .contact-info i {
+    margin-right: 8px;
+    color: #0056b3;
+    font-size: 1.2em;
+  }
+  .contact-divider {
+    height: 30px;
+    width: 2px;
+    background-color: #0056b3;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  </style>
 </head>
 <body>
 
@@ -67,9 +74,17 @@
 </div>
 
 <div class="contact-info">
-  <p>Phone: 214-535-2496 | Email: <a href="mailto:SamRobertstad@gmail.com">SamRobertstad@gmail.com</a></p>
-  <p><a href="https://www.linkedin.com/in/samrobertstad" target="_blank">LinkedIn</a> | Location: Reno, NV | Remote Opportunities</p>
+  <div><i class="fas fa-phone"></i><a href="tel:2145352496">214-535-2496</a></div>
+  <span class="contact-divider"></span>
+  <div><i class="fas fa-envelope"></i><a href="mailto:SamRobertstad@gmail.com">SamRobertstad@gmail.com</a></div>
+  <span class="contact-divider"></span>
+  <div><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/samrobertstad" target="_blank">LinkedIn</a></div>
+  <span class="contact-divider"></span>
+  <div><i class="fas fa-map-marker-alt"></i>Reno, NV | Remote</div>
 </div>
+
+</body>
+</html>
 
 <div class="section">
   <h2>Professional Summary</h2>
