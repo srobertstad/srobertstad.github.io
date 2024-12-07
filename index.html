@@ -8,42 +8,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+    /* CSS Variables */
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #f7f9fc;
+      --accent-color: #003d80;
+      --text-color: #333;
+      --card-bg: #fff;
+    }
+
     /* Base Styles */
     body {
       font-family: 'Roboto', sans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      color: #333;
-      background-color: #f7f9fc;
+      color: var(--text-color);
+      background-color: var(--secondary-color);
+      animation: fadeIn 1s ease-in;
     }
-    h1, h2 { color: #0056b3; margin-bottom: 0.5em; }
-    h1 { font-size: 2.5em; font-weight: 700; text-align: center; }
-    h2 { font-size: 1.75em; font-weight: 500; border-bottom: 2px solid #0056b3; padding-bottom: 5px; margin-top: 1.5em; }
-    p, li { line-height: 1.6; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 10px; }
-    a { color: #0056b3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    h1, h2 {
+      color: var(--primary-color);
+      margin-bottom: 0.5em;
+    }
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.75em;
+      font-weight: 600;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 5px;
+      margin-top: 1.5em;
+    }
+    p, li {
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
 
     /* Header */
     .header {
-      background-color: #0056b3;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
       color: white;
       text-align: center;
       padding: 20px 0;
       margin-bottom: 20px;
+      border-radius: 8px;
     }
-    .header h1 { font-size: 3em; font-weight: bold; color: white; }
-    .subtitle { font-size: 1.5em; color: white; margin-top: 10px; }
+    .header h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+    }
+    .subtitle {
+      font-size: 1.5em;
+      color: white;
+      margin-top: 10px;
+    }
 
     /* Contact Info */
     .contact-info {
       text-align: center;
       background: #eaf3ff;
-      padding: 15px;
+      padding: 20px;
       border-radius: 8px;
-      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
     }
     .contact-info div {
       display: inline-block;
@@ -54,13 +94,13 @@
     }
     .contact-info i {
       margin-right: 8px;
-      color: #0056b3;
+      color: var(--primary-color);
       font-size: 1.2em;
     }
     .contact-divider {
       height: 30px;
       width: 2px;
-      background-color: #0056b3;
+      background-color: var(--primary-color);
       display: inline-block;
       vertical-align: middle;
     }
@@ -69,14 +109,39 @@
     .section {
       margin-bottom: 30px;
       padding: 20px;
-      background-color: #fff;
+      background-color: var(--card-bg);
       border-radius: 8px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
-    /* Education Items */
-    .education-item {
-      margin-bottom: 10px;
+    /* Career Highlights */
+    ul {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    ul li {
+      flex: 1 1 calc(50% - 15px);
+      background: var(--card-bg);
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    ul li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      background-color: #f0f8ff;
+    }
+    ul li::before {
+      content: '\f058';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin-right: 10px;
+      color: var(--primary-color);
     }
 
     /* Responsive Styles */
@@ -93,6 +158,9 @@
       }
       .contact-divider {
         display: none;
+      }
+      ul li {
+        flex: 1 1 100%;
       }
     }
 
@@ -115,6 +183,58 @@
         border-radius: 0;
       }
     }
+
+    /* Fade-In Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+.cta {
+  text-align: center;
+  margin-top: 20px;
+}
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+.cta-button i {
+  margin-right: 8px;
+}
+    
+    /* Back-to-Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .back-to-top:hover {
+      background: var(--accent-color);
+    }
   </style>
 </head>
 <body>
@@ -136,69 +256,86 @@
     <div><i class="fas fa-map-marker-alt"></i>Reno, NV | Remote</div>
   </div>
 
-  <!-- Professional Summary -->
-  <section>
+  <section class="section">
     <h2>Professional Summary</h2>
-    <p>
-      Dynamic and results-oriented senior product leader with over 15 years of experience scaling SaaS, AI-driven, and API-integrated solutions for global organizations like 
-      <strong>Amazon</strong>, <strong>T-Mobile</strong>, <strong>Warner Bros. Discovery</strong>, and <strong>Sinclair Digital</strong>. 
-      Proven track record of launching transformative features that drove measurable outcomes, including improved user satisfaction, increased profitability, and operational efficiencies. 
-      Holds an MBA in Brand Management & Strategy and has successfully managed complex portfolios exceeding <strong>$135M</strong>.
-    </p>
+    <p>Dynamic and results-oriented senior product leader with over 15 years of experience scaling SaaS, AI-driven, and API-integrated solutions for global organizations like Amazon, T-Mobile, Warner Bros. Discovery, and Sinclair Digital. Proven track record of launching transformative features that drove measurable outcomes, including improved user satisfaction, increased profitability, and operational efficiencies. Adept at leading cross-functional teams, driving product lifecycle success from concept to launch, and delivering customer-centric digital experiences. Holds an MBA in Brand Management & Strategy and has successfully managed complex portfolios exceeding $135M.</p>
   </section>
 
-  <!-- Career Highlights -->
-  <section>
+  <section class="section">
     <h2>Career Highlights</h2>
     <ul>
-      <li><strong>AI-Powered SaaS Tools (Sinclair):</strong> Cut delivery times by <strong>50%</strong> with AI-powered tools like Text Transcription and Read Aloud.</li>
-      <li><strong>ATSC 3.0 Broadcaster App (Sinclair):</strong> Increased user engagement by <strong>100%</strong>, setting new benchmarks in NextGen TV standards.</li>
-      <li><strong>Magnolia Network Launch (Warner Bros. Discovery):</strong> Delivered a multi-platform launch to <strong>12M+ subscribers</strong>, reducing cart abandonment by <strong>10%</strong>.</li>
-      <li><strong>Global Royalty Costing Tool (Amazon):</strong> Cut delivery time by <strong>97%</strong>, from 37 days to 1 day, through cloud-based automation.</li>
-      <li><strong>Scam ID/Block (T-Mobile):</strong> Intercepted <strong>14B scam calls</strong>, saving consumers <strong>$10B</strong>.</li>
-      <li><strong>Netflix On Us (T-Mobile):</strong> Directed API integration, enhancing retention through seamless billing synchronization.</li>
-      <li><strong>App Freedom (T-Mobile):</strong> Reduced preloads by <strong>50%</strong> (Carrier), <strong>35%</strong> (Google), and <strong>25%</strong> (OEM), driving customer satisfaction.</li>
-      <li><strong>SMS Short Code (MetroPCS):</strong> Generated <strong>$1.5M annual revenue</strong> and reduced churn by <strong>5%</strong>.</li>
-      <li><strong>Profitability Optimization (MetroPCS):</strong> Stopped <strong>$830K/month revenue loss</strong> and achieved <strong>$20M+ annual savings</strong>.</li>
+      <li>AI-Powered SaaS Tools (Sinclair): Cut delivery times by 50% with AI-powered tools like Text Transcription and Read Aloud.</li>
+      <li>ATSC 3.0 Broadcaster App (Sinclair): Increased user engagement by 100% through leading Sinclair’s ATSC 3.0 Broadcast Application launch, setting new benchmarks in NextGen TV standards.</li>
+      <li>Magnolia Network Launch (Warner Bros. Discovery): Delivered a multi-platform launch to 12M+ subscribers, reducing cart abandonment by 10%.</li>
+      <li>Global Royalty Costing Tool (Amazon): Cut delivery time by 97%, from 37 days to 1 day, through cloud-based automation.</li>
+      <li>Scam ID/Block (T-Mobile): Intercepted 14B scam calls, saving consumers $10B with Scam ID/Block innovation.</li>
+      <li>Netflix On Us (T-Mobile): Directed API integration, enhancing retention through seamless billing and account synchronization.</li>
+      <li>App Freedom (T-Mobile): Reduced carrier, Google, and OEM preloads by 50%, 35%, and 25% respectively, driving customer satisfaction via device customization.</li>
+      <li>SMS Short Code (MetroPCS): Created an industry-first short code business model, generating $1.5M annual revenue and reducing churn by 5%.</li>
+      <li>Profitability Optimization (MetroPCS): Stopped $830K/month revenue loss and achieved $20M+ annual savings through renegotiated contracts and portfolio optimization.</li>
     </ul>
   </section>
 
-  <!-- Areas of Expertise -->
-  <section>
+  <section class="section">
     <h2>Areas of Expertise</h2>
     <ul>
-      <li><strong>Product Strategy & Execution:</strong> Product lifecycle management, competitive analysis, roadmap development.</li>
-      <li><strong>Technology Leadership:</strong> AI feature innovation, SaaS platforms, API integrations, ecosystem partnerships.</li>
-      <li><strong>Customer-Centric Innovation:</strong> Go-to-market strategy, user experience enhancement, digital product launches.</li>
-      <li><strong>Team & Stakeholder Collaboration:</strong> Cross-functional leadership, vendor management, contract negotiation.</li>
+      <li>Product Strategy & Execution: Product lifecycle management, competitive analysis, roadmap development.</li>
+      <li>Technology Leadership: AI feature innovation, SaaS platforms, API integrations, ecosystem partnerships.</li>
+      <li>Customer-Centric Innovation: Go-to-market strategy, user experience enhancement, digital product launches.</li>
+      <li>Team & Stakeholder Collaboration: Cross-functional leadership, vendor management, contract negotiation.</li>
     </ul>
   </section>
 
-  <!-- Industry Experience -->
-  <section>
+  <section class="section">
     <h2>Industry Experience</h2>
     <ul>
-      <li><strong>Media & Entertainment:</strong> 3.5 years (Warner Bros. Discovery & Sinclair Digital)</li>
-      <li><strong>Internet Retail & SaaS:</strong> 2 years (Amazon)</li>
-      <li><strong>Telecom:</strong> 10+ years (MetroPCS & T-Mobile)</li>
-      <li><strong>Entrepreneurship:</strong> 2 years (Co-founder, DINKlife)</li>
-      <li><strong>Consulting:</strong> 6 months (BearingPoint)</li>
-      <li><strong>Education Leadership:</strong> 5 years (Private High School Department Chair)</li>
+      <li>Media & Entertainment: 3.5 years (Warner Bros. Discovery & Sinclair Digital)</li>
+      <li>Internet Retail & SaaS: 2 years (Amazon)</li>
+      <li>Telecom: 10+ years (MetroPCS & T-Mobile)</li>
+      <li>Entrepreneurship: 2 years (Co-founder, DINKlife)</li>
+      <li>Consulting: 6 months (BearingPoint)</li>
+      <li>Education Leadership: 5 years (Private High School Department Chair)</li>
     </ul>
   </section>
 
-  <!-- Education -->
-  <section>
+  <section class="section">
     <h2>Education</h2>
-    <div class="education-item"><strong>MBA, Marketing & Strategy</strong> - Southern Methodist University – Dallas, TX</div>
-    <div class="education-item"><strong>Master of Humanities, Political Theory & Literature</strong> - University of Dallas – Dallas, TX</div>
-    <div class="education-item"><strong>BA, Political Science</strong> - University of Texas at Arlington – Arlington, TX</div>
+    <div class="education-item">MBA, Marketing & Strategy - Southern Methodist University</div>
+    <div class="education-item">Master of Humanities - University of Dallas</div>
+    <div class="education-item">BA, Political Science - University of Texas at Arlington</div>
   </section>
 
-  <!-- Call to Action -->
-  <section>
-    <h3>Let’s connect to discuss how I can drive impactful results for your organization through innovative product management and strategic leadership.</h3>
-  </section>
+<section class="section">
+  <h2>Let's Connect</h2>
+  <p>
+    I’m excited to bring my expertise in innovative product management and strategic leadership to your organization. 
+    Let’s connect to discuss how I can drive impactful results for your team!
+  </p>
+  <div class="cta">
+    <a href="mailto:SamRobertstad@gmail.com" class="cta-button"><i class="fas fa-envelope"></i> Email Me</a>
+    <a href="https://www.linkedin.com/in/samrobertstad" target="_blank" rel="noopener noreferrer" class="cta-button">
+      <i class="fab fa-linkedin"></i> Connect on LinkedIn
+    </a>
+  </div>
+</section>
 
+<div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+  ↑
+</div>
+  
+  <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑
+  </div>
+
+  <script>
+    document.addEventListener('scroll', () => {
+      const button = document.querySelector('.back-to-top');
+      if (window.scrollY > 200) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
